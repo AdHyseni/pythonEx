@@ -1,4 +1,13 @@
-# Numero nga 1 ne 10:
+"""
+krijo funksione te cilat gjejne
+-- Sip e katrorit
+-- Sip e rrethit
+-- Sip e trekendshit kendrejt
 
-for i in range(0,10):
-    print(i+1)
+beji krahasimin e tre siperfaqeve 
+te ndryshme nga e njejta figure gjometrike
+
+printo siperfaqen me te madhe
+
+"""
+
