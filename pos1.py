@@ -18,7 +18,7 @@ komandat = ['Per te shikuar listen e produkteve shtypni \'a\''
             ,'Per te printuar komandat shtypni \'h\''
             ]
 
-produktet = ['iphone', 'samsung', 'pixel', 'xiaomi', 'oppo','vivo', 'oneplus','sony']
+produktet = ['Iphone', 'samsung', 'pixel', 'xiaomi', 'oppo','vivo', 'oneplus','sony']
 shporta = []
 cmimet = []
 
