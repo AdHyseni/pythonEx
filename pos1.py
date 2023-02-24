@@ -18,49 +18,30 @@ komandat = ['Per te shikuar listen e produkteve shtypni \'a\''
             ,'Per te printuar komandat shtypni \'h\''
             ]
 
-produktet = ['Iphone', 'samsung', 'pixel', 'xiaomi', 'oppo','vivo', 'oneplus','sony']
+produktet = {
+    'iphone': 1200,
+    'samsung':800, 
+    'pixel':700, 
+    'xiaomi':400, 
+    'oppo':300,
+    'vivo':200, 
+    'oneplus':900,
+    'sony':1500
+}
 shporta = []
 cmimet = []
 
-def afisho(lista):
-    for element in lista:
+def afisho(produktet):
+    for element in produktet.key():
         print(element)
 
 def bli(produkti):
-    if produkti == 'iphone':
+    if produkti.lower() in produktet.keys():
         shporta.append(produkti)
-        sasia = int(input('Vendos sasine: '))
-        cmimet.append(sasia*1000)
-    elif produkti == 'samsung':
-        shporta.append(produkti)
-        sasia = int(input('Vendos sasine: '))
-        cmimet.append(sasia*1200)
-    elif produkti == 'sony':
-        shporta.append(produkti)
-        sasia = int(input('Vendos sasine: '))
-        cmimet.append(sasia*2000)
-    elif produkti == 'pixel':
-        shporta.append(produkti)
-        sasia = int(input('Vendos sasine: '))
-        cmimet.append(sasia*800)
-    elif produkti == 'xiaomi':
-        shporta.append(produkti)
-        sasia = int(input('Vendos sasine: '))
-        cmimet.append(sasia*600)
-    elif produkti == 'oppo':
-        shporta.append(produkti)
-        sasia = int(input('Vendos sasine: '))
-        cmimet.append(sasia*400)
-    elif produkti == 'oneplus':
-        shporta.append(produkti)
-        sasia = int(input('Vendos sasine: '))
-        cmimet.append(sasia*500)
-    elif produkti == 'vivo':
-        shporta.append(produkti)
-        sasia = int(input('Vendos sasine: '))
-        cmimet.append(sasia*200)
+        sasia =int(input('Vendos sasine: '))
+        cmimet.append(produktet[produkti]*sasia)
     else:
-        print('Produkti nuk ndodhet ne dyqanin tone')
+        print('Produkti nuk ekziston')
 
 def fatura(shporta, cmimet):
     print('------- Fatura -------')
