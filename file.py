@@ -1,8 +1,8 @@
 # # metoda 1 per hapur nje file
 
-# file_1 = open('test.txt','r')
-# print(file_1)
-# file_1.close()
+file_1 = open('test.txt','r')
+print(file_1)
+file_1.close()
 
 # try:
 #     file_1 = open('test2.txt','x')
@@ -10,10 +10,10 @@
 # except Exception as e:
 #     print(e)
 
-# #metoda 2 
-# with open('test.txt','r') as f:
-#     for i in f:
-#         print(i)
+#metoda 2 
+with open('test.txt','r') as f:
+    for i in f:
+        print(i)
 
 # try:
 #     emri_file = input('Vendos emrin e file: ')
@@ -58,6 +58,7 @@ count = 0
 try:
     f = open('lorem.txt','r')
     for line in f:
+        print(line)
         if line.startswith('Lorem') or line.startswith('lorem'):
             count = count +1
 except Exception as e:

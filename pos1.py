@@ -31,9 +31,9 @@ produktet = {
 shporta = []
 cmimet = []
 
-def afisho(produktet):
-    for element in produktet.key():
-        print(element)
+def afisho(element):
+    for e in element:
+        print(e)
 
 def bli(produkti):
     if produkti.lower() in produktet.keys():
@@ -61,7 +61,11 @@ while True:
     match user_input.lower():
         case 'a':
             print('Lista e produkteve eshte: ')
-            afisho(produktet)
+            afisho(produktet.keys())
+        case 'l':
+            print('Lista e produkteve dhe cmimeve eshte : ')
+            for key,value in produktet.items():
+                print(f'Produkti {key} ka cmimin {value}')
         case 's':
             print('Lista e produkteve te shpores eshte: ')
             afisho(shporta)
