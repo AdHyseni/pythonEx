@@ -20,15 +20,13 @@ def tipi(value):
         pass
     else:
         return False
-def print_alternativat(list_alt):
+def print_alternativat(list_alt,v):
     perv = 0
-    for i in range(0,3):
-        rand_int = r.randint(0,len(list_alt))
-        if perv == rand_int:
-            continue
-        else:
-            perv = rand_int
-            print(list_alt[rand_int-1])
+    list_alt.append(v)
+    r.shuffle(list_alt)
+    for i in list_alt:
+        print(i)
+
 def scores(v):
     user_input = input('Pergjigja juaj: ')
     global score
@@ -36,6 +34,7 @@ def scores(v):
         score += 1
     else:
         score = score
+
 def quiz_game(dictionary,alternativat):
     alt = list()
     for k,v in dictionary.items():
@@ -44,8 +43,7 @@ def quiz_game(dictionary,alternativat):
             for i in alternativat:
                 if tipi(i):
                     alt.append(i)
-            print_alternativat(alt)
-            print(v)
+            print_alternativat(alt,v)
             scores(v)
         elif v.lower() == 'jo' or  v.lower() == 'po':
             if v.lower() == 'jo':
@@ -62,11 +60,11 @@ def quiz_game(dictionary,alternativat):
                         continue
                 except Exception as e:
                     alt.append(i) 
-            print_alternativat(alt)
-            print(v)
+            print_alternativat(alt,v)
             scores(v)
         alt.clear()  
-    print(score)          
+    print(score)
+          
 quiz_game(quiz,alternativat)
 
 
