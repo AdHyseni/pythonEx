@@ -65,13 +65,18 @@ class Storage:
     }
 
     def get_item_qty(self,desc):
+       counter = 0
+       len_key = len(self.storage.keys())
        for key, val in self.storage.items():
-          if desc.lower() == key:
-             print(val)
-             return val
-          else:
-             print('Error no such Item ',desc)
-             return None
+         if desc.lower() == key:
+            print(val)
+            return val
+         elif counter == len_key:
+            print('Error no such Item ',desc)
+            return None
+         else:
+            continue
+         counter += 1
     
     def add_item(self,item, no):
        self.storage[item.description] = Item_Quantity(item,no)
